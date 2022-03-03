@@ -6,33 +6,48 @@
         <link rel="stylesheet" href="styles.css">
         <style>
           .img-chalet {display: block; 
-                       margin-left: auto; 
-                       margin-right: auto; 
-                       width: 100px; font-family: sans-serif; 
-                       background-color: rgb(209, 179, 146);}
+                       width: 300px;
+                       height: auto;
+                       margin: 20px;
+                      border: dotted 5px rgb(64, 45, 22);}
+          #img-voyage {margin: 10px;
+                       padding: 10px;
+                       width: 240px;}
+          #img-chalet {position: absolute;
+                       top: 425px;
+                       right: 100px}
+          #img-cannau {position: absolute;
+                       top: 425px;
+                       right: 450px}
+          
         </style>
     </head>
     <body>
-        <h1>Le Voyage Parfait :<br> Un Séjour au Chalet</h1>
+      <h1>Le Voyage Parfait :<br> Un Séjour au Chalet</h1>
         <p id="intro-concl">Rien ne bat un séjour relaxant dans un chalet, entouré d'une grande forêt, et au bord d'un lac <em>scintiant</em>.</p>
-        <img src="images/chalet.jpeg" height="160" class="img-chalet">
-        <!--Source image :https://www.quebec-cite.com/fr/hebergement-quebec/chalets-a-louer-->
-        <h2 class="corps">Activités :</h2>
-        <ul class="corps">
-            <li>Randonnés en forêt</li>
-            <li>Nager dans le Lac</li>
-            <li>Faire du canneau</li>
-            <li>Lire dehors</li>
-        </ul>
-        <img src="images/cannau.jpeg" height="160" class="img-chalet">
-        <!--Source image: https://www.northeasternontario.com/french-river-canoing/-->
-        <h2 class="corps">Meilleurs nourritures à manger :</h2>
-         <ol class="corps">
+        <div id="info-voyage">
+          <h2>Activités :</h2>
+            <ul>
+              <li>Randonnés en forêt</li>
+              <li>Nager dans le Lac</li>
+              <li>Faire du canneau</li>
+              <li>Lire dehors</li>
+            </ul>
+          <h2>Meilleurs nourritures à manger :</h2>
+        
+         <ol>
              <li>Guimauves au bord d'un feu de camps</li>
              <li>Du Steak cuit sur le BBQ</li>
              <li>Bleuets sauvages</li>
              <li>Salade avec les légumes du jardin</li>
          </ol>
+        </div>
+        <div id="img-voyage"> 
+          <img src="images/chalet.jpeg" height="160" class="img-chalet" id="img-chalet">
+          <!--Source image :https://www.quebec-cite.com/fr/hebergement-quebec/chalets-a-louer-->
+          <img src="images/cannau.jpeg" height="160" class="img-chalet" id="img-cannau">
+          <!--Source image: https://www.northeasternontario.com/french-river-canoing/-->  
+        </div>          
     <p id="intro-concl">Il est encore meilleur de faire ses activités et de savourer cette nourriture avec ta famille <strong>et</strong> tes amis.</p>
     <p id="retour"><a href="index.html">Retour à la page d'accueil</a></p>
     </body>
