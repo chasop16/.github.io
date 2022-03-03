@@ -16,7 +16,7 @@ h1 {text-align: center;
          width: 200px;
          margin: auto;
          padding: 5px;}
-h2, th, h4 {font-family: fantasy; 
+h2, th, h4 {font-family: "Garamond", serif; 
             color: rgb(117, 87, 50);
             font-size: 2em}
 p, li, td {font-family: "Garamond", serif;
