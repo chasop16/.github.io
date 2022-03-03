@@ -6,71 +6,90 @@
    <title>Page Web Biographique</title>
    <link rel="stylesheet" href="styles.css">
    <style>
-     #retour {font-size: 1.2em;
-                  font-family: "Garamond", serif;
-                  line-height: 1.5em;
-                  text-align: center}
+     
+     #menu-bio {position: fixed;
+                bottom: 5%;
+                right: 5%;
+                width: 30%;
+                margin-left: 30px;
+                margin-top: 30px;
+                width: 14em;
+                height: auto;
+                border: dotted 4px rgb(64, 45, 22);}
+     #frogy {padding: 2em;
+            margin-right: 15px;
+            margin-left: 15px;}
+     #ordered-menu {padding: 2em;
+                    margin-right: 10px;
+                    margin-left: 10px;}
+     #info-bio {width: 70%;}
    </style>
  </head>
  <body>
    <h1><u>Ma Biographie - Un peu sur moi</u></h1>
-   <ol>
-     <li><a href="#Introduction">Introduction</a></li>
-     <li><a href="#Passe-temps">Passe-temps</a></li>
-     <li><a href="#Languages">Languages de programmation</a></li>
-   </ol>
-   <h2>1. <a id="Introduction">Introduction</a></h2>
-   <p>Bonjour! Je m'appelle Chasop16. Bienvenue à ma page web biographique. J'aime bien la nature, mon animal préféré est la grenouille.</p>
-   <img src="images/1085.jpeg" height="180">
+   <div id="pos-menu">
+   <div id="menu-bio">
+     <ol id="ordered-menu">
+       <li><a href="#Introduction">Introduction</a></li>
+       <li><a href="#Passe-temps">Passe-temps</a></li>
+       <li><a href="#Languages">Languages de programmation</a></li>
+     </ol>
+     <img src="images/1085.jpeg" height="180" id="frogy">
    <!--Source image : Félixanne Harvey, 4 août 2020, https://www.meteomedia.com/photos/vues/animaux/grenouille-verte-et-grenouille-des-bois/35048274-->
-   <h2>2. <a id="Passe-temps">Passe-temps</a></h2>
-   <p>Dans mon temps libres j'aime bien :</p>
-   <ul>
-     <li>Faire des randonnées</li>
-     <li><a target="_blank" href="https://terryfox.org/fr/">Courir le Cross-Country</a></li>
-     <li><a target="_blank" href="https://www.agathachristie.com/stories">Lire des livres de mystère :</a><Br>(Par exemple ceux d'Agatha Christie)</li>
-   </ul>
-   <h2>3. <a id="Languages">Languages de programmation</a></h2>
-   <table>
-     <thead>
-       <tr>
-         <th>Languages</th>
-         <th>Compétences</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>HTML</td>
-         <td>
-           <ul>
-             <li>Titres et paragraphes</li>
-             <li>Mise en évidence de texe</li>
-             <li>Retour de ligne</li>
-             <li>Images</li>
-             <li>Listes</li>
-             <li>Liens internes & externes</li>
-             <li>Commentaires</li>
-           </ul>
-         </td>
-         <!--Dans le tableau j'ai fait une liste non-ordonné-->
-       </tr>
-       <tr>
-         <td>CSS</td>
-         <td>
-           <ul>
-             <li>Ajouter de la couleur</li>
-             <li>Utilisation de id et classe</li>
-             <li>Changer les propriétés lié à la police</li>
-             <li>Regrouper des éléments</li>
-             <li>Marges, padding et bordures</li>
-             <li>Position des éléments (faire flotter)</li>
-             <li>Classes avec sélecteur d'élément</li>
-             <li>Utilisé des sélecteurs</li>
-           </ul>
-       </tr>
-       <!--Plus de langue et compétence à ajouter plus tard-->
-     </tbody>
-   </table>
+   </div>
+   </div>
+   <div id="info-bio">
+     <h2>1. <a id="Introduction">Introduction</a></h2>
+     <p>Bonjour! Je m'appelle Chasop16. Bienvenue à ma page web biographique. J'aime bien la nature, mon animal préféré est la grenouille.</p>
+     <h2>2. <a id="Passe-temps">Passe-temps</a></h2>
+     <p>Dans mon temps libres j'aime bien :</p>
+     <ul>
+       <li>Faire des randonnées</li>
+       <li><a target="_blank" href="https://terryfox.org/fr/">Courir le Cross-Country</a></li>
+       <li><a target="_blank" href="https://www.agathachristie.com/stories">Lire des livres de mystère :</a><Br>(Par exemple ceux d'Agatha Christie)</li>
+     </ul>
+     <h2>3. <a id="Languages">Languages de programmation</a></h2>
+     <table>
+       <thead>
+         <tr>
+           <th>Languages</th>
+           <th>Compétences</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>HTML</td>
+           <td>
+             <ul>
+               <li>Titres et paragraphes</li>
+               <li>Mise en évidence de texe</li>
+               <li>Retour de ligne</li>
+               <li>Images</li>
+               <li>Listes</li>
+               <li>Liens internes & externes</li>
+               <li>Commentaires</li>
+             </ul>
+           </td>
+           <!--Dans le tableau j'ai fait une liste non-ordonné-->
+         </tr>
+         <tr>
+           <td>CSS</td>
+           <td>
+             <ul>
+               <li>Ajouter de la couleur</li>
+               <li>Utilisation de id et classe</li>
+               <li>Changer les propriétés lié à la police</li>
+               <li>Regrouper des éléments</li>
+               <li>Marges, padding et bordures</li>
+               <li>Position des éléments (faire flotter)</li>
+               <li>Classes avec sélecteur d'élément</li>
+               <li>Utilisé des sélecteurs</li>
+             </ul>
+         </tr>
+         <!--Plus de langue et compétence à ajouter plus tard-->
+       </tbody>
+     </table>
+   </div>
    <p id="retour"><a href="index.html">Retour à la page d'accueil</a></p>
    <script src="script.js"></script>
  </body>
