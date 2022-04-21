@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #formNom {font-size: 1.2em;
+              margin: 30px;
+             }
+    #divAffiche {font-size: 1.2em;
+                margin: 30px;
+                }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>Formulaire Afficheur de nom</h1>
+
+    <div id="formNom">
+    <!-- textbox pour le Prénom -->
+    <label for="txtNom">Prénom :</label>
+    <input type="text" id="txtPrenom">
+    <br></br>
+    <label for="txtNom">Nom du millieu :</label>
+    <input type="text" id="txtNomMillieu">
+    <br></br>
+    <label for="txtNom">Nom de Famille :</label>
+    <input type="text" id="txtNomFamille">
+    <br></br>
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnSoumet" onclick="confirmeInscription()"  value="Soumettre le formulaire">
+    </div>
+    <div id="divAffiche">
+    </div>
+  <script src="scripts/afficheurNom.js"></script>
+  </form>
+</body>
+</html>
