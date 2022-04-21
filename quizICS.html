@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz ICS</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #quizComplet {font-size: 1.2em;
+                  margin: 30px;
+                 }
+    #divAffiche {font-size: 1.2em;
+                margin: 30px;
+                }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>Quiz ICS</h1>
+    <script src="script.js"></script>
+
+    <div id="quizComplet">
+    <!-- Question 1 : selectionne le string -->
+    <label for="radQuesString"><strong>Quel est un string?</strong></label><br>
+    <input type="radio" name="QuesString" id="repTrue" value="true">
+    <label for="repTrue">true</label><br>
+    <input type="radio" name="QuesString" id="repPatate"value="patate">
+    <label for="repPatate">patate</label><br>
+    <input type="radio" name="QuesString" id="rep'05'" value='"05"'>
+    <label for="rep'05'">"05"</label><br>
+    <input type="radio" name="QuesString" id="rep05" value="05">
+    <label for="rep05">05</label>
+    <br></br>
+    
+    <!-- Question 2 : inscrit ce qui serait afficher -->
+    <label for="txtAff"><strong>Si la variable pays a une valeur "Canada", qu'afficherait ce code :</strong><br>alert(pays);</label>
+    <br></br>
+    <input type="text" id="txtPaysAfficher">
+    <br><br>
+    
+     <!-- Question 3 : selectionne les bons exemples de variables -->
+    <label for="chkVariable"><strong>Selectionne les bons exemples de variables.</strong></label><br>
+    <input type="checkbox" id="chkVar1" name="variable" value="cout">
+    <label for="chkVar1">cout</label><br>
+    <input type="checkbox" id="chkVar2" name="variable" value="nombredepatte">
+    <label for="chkVar2">nombredepatte</label><br>
+    <input type="checkbox" id="chkVar3" name="variable" value="nombre de patte">
+    <label for="chkVar3">nombre de patte</label><br>
+    <input type="checkbox" id="chkVar4" name="variable" value="nombreDePatte">
+    <label for="chkVar4">nombreDePatte</label>
+    <br></br>
+
+    <!-- Question 4 : selectionne l'expression booléenne qui n’est pas un opérateur conditionnel -->
+    <label for="selConditionnel"><strong>Selectionne l'expression booléenne qui n’est pas un opérateur conditionnel.</strong></label><br></br>
+    <select id="selConditionnel">
+      <option value="faux">if ( x = 5 )</option>
+      <option value="vrai">if ( x != y )</option>
+      <option value="vrai">if ( taxi == true && distance > 500 )</option>
+    </select>
+    <br><br>
+
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnSoumet" onclick="confirmeResultat()"  value="Soumettre le quiz">
+    </div>
+    <!-- Création d'une section pour l'affichage des résultats -->
+    <div id="divAffiche">
+    </div>
+    <p id="retour"><a href="index.html">Retour à la page d'accueil</a></p>
+    <script src="scripts/quizICS.js"></script>
+  </form>
+</body>
+
+</html>
