@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Madlibs</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+  #entreeMots {font-size: 1.2em;
+              margin: 30px;}
+  #divAffiche {font-size: 1.2em;
+                margin: 30px;}
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>Madlibs - Les plaisirs d'été</h1>
+
+    <div id="entreeMots">
+      <!--Entree de mots-->
+      <label for="txtVet">Vêtements - nom pluriel :</label>
+      <input type="text" id="txtVetement">
+      <br></br>
+      
+      <label for="txtNourriture">Nourriture, avec déterminant :</label>
+      <input type="text" id="txtNourriture">
+      <br></br>
+
+      <label for="txtAction">Action - verbe à l’infinitif :</label>
+      <input type="text" id="txtAction">
+      <br></br>
+
+      <label for="txtAmi">Nom d’ami :</label>
+      <input type="text" id="txtAmi">
+      <br></br>
+
+      <label for="txtNourriPluri">Nourriture - au pluriel :</label>
+      <input type="text" id="txtNourriPluri">
+      <br></br>
+
+      <label for="txtNom">Adjectif - au pluriel :</label>
+      <input type="text" id="txtAdjectif">
+      <br></br>
+
+      <label for="txtAction2">Action - verbe à l’infinitif :</label>
+      <input type="text" id="txtAction2">
+      <br></br>
+
+      <label for="txtNom">Adverbe qui termine en -ment :</label>
+      <input type="text" id="txtAdverbe">
+      <br></br>
+
+      <label for="txtNourriMascu">Nourriture - masculin:</label>
+      <input type="text" id="txtNourriMascu">
+      <br></br>
+
+      <label for="txtNom">Nom - masculin :</label>
+      <input type="text" id="txtNom">
+      <br></br>
+
+      <label for="txtAdjectif2">Adjectif :</label>
+      <input type="text" id="txtAdjectif2">
+      <br></br>
+      
+      <!-- bouton pour soumettre le formulaire -->
+      <input type="button" id="btnSoumet" onclick="confirmMadLibs()"  value="Soumettre le MadLibs">
+    </div>
+    
+    <div id="divAffiche">
+    </div>
+
+    <p id="retour"><a href="index.html">Retour à la page d'accueil</a></p>
+  <script src="scripts/madLibs.js"></script>
+</body>
+
+</html>
