@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bijoux Chamberlain</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .description {text-align: center;}
+    .itemsVendre {display: grid;
+                  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                  grid-gap: 20px;}
+    .items {text-align: center;
+            border: dotted 2px  rgb(5, 92, 83);}
+    #livraison {margin-top: 20px;}
+    #divAfficheRecu {text-align: center;
+                     margin-top: 20px;
+                     margin-bottom: 20px;
+                     margin-left:35%;
+                     margin-right:35%;
+                     background-color: white;
+                     padding: 10px;
+                     width: 30%;}
+    #caisse {margin-top: 1.5em;}
+    #divMessageMerci {text-align: center;
+                      color: rgb(5, 92, 83);
+                      margin-top: 10px;
+                      margin-bottom: 10px;}
+    td {font-size: 1.25em;}
+    #btnPayer {margin-top: 10px;}
+    #divAfficheRetour {margin-top: 20px;
+                       font-size: 1.25em;
+                       position: absolute;
+                       right: 20%;
+                       top: 175%;}
+    #btnCaisse, #btnMagasin {color: black;
+                             font-size: 1.2em;
+                             font-family: "Garamond", serif;
+                             line-height: 2em;
+                             text-align: center;
+                             border: dotted 4px rgb(64, 45, 22);
+                             width: 200px;
+                             margin: auto;
+                             padding: 5px;}
+    .bouton {display: grid;
+             grid-template-columns: 1fr 1fr;
+             grid-gap: 10px;
+             margin-bottom: 20px;}
+    table, th, td {border: dotted 2px  rgb(5, 92, 83);}
+  </style>
+  <!--Source CSS pour classe itemsVendre : https://coder-coder.com/display-divs-side-by-side/-->
+</head>
+
+<body>
+  <h1><a id="magasin">Bijoux Chamberlain</a></h1>
+  <div id="corpsMagasin">
+  <p class="description">Bienvenu à <em>Bijoux Chamberlain! </em> Un magasin qui vend des bijoux de qualité fait à la main.</p>
+  
+  <form>
+    <!--Selecteur afin de choisir la region ou ils vivent (Ontario ou Quebec)-->
+    <label for="selRegion"><u>Province de residence :</u></label>
+    <br>
+    <select id="selRegion">
+      <option value="ontario">Ontario</option>
+      <option value="quebec">Quebec</option>
+    </select>
+    <br><br>
+    
+    <!--Chaque item-->
+    <div class= "itemsVendre">
+      <div class = "items" id="item1">
+        <h2>Collier en Argent</h2>
+        <img src="images/colierArgent.jpg" height="100" id="argent">
+        <p>25$</p>
+        <label for="txtqteI1">Quantité :</label>
+        <input type="text" id="txtqteI1">
+        <br><br>
+      </div>
+    
+      <div class = "items" id="item2">
+        <h2>Collier en Or</h2>
+        <img src="images/colierOr.jpg" height="100" id="or">
+        <p>29$</p>
+        <label for="txtqteI2">Quantité :</label>
+        <input type="text" id="txtqteI2">
+        <br><br>
+      </div>
+    
+      <div class = "items" id="item3">
+        <h2>Bague</h2>
+        <img src="images/bague.jpg" height="100" id="bague">
+        <p>18$</p>
+        <label for="txtqteI3">Quantité :</label>
+        <input type="text" id="txtqteI3">
+        <br><br>
+      </div>
+    
+      <div class = "items" id="item4">
+        <h2>Bracelet</h2>
+        <img src="images/bracelet.jpg" height="100" id="bracelet">
+        <p>20$</p>
+        <label for="txtqteI2">Quantité :</label>
+        <input type="text" id="txtqteI4">
+        <br><br>
+      </div>
+    
+      <div class = "items" id="item5">
+        <h2>Boucles d'oreille</h2>
+        <img src="images/boucleOreille.jpg" height="100" id="boucleOreille">
+        <p>22$</p>
+        <label for="txtqteI5">Quantité :</label>
+        <input type="text" id="txtqteI5">
+        <br><br>
+      </div>
+    </div>
+    
+    <!--Selection de type de livraison-->
+    <div id="livraison">
+      <label for="radLivraison"><u>Type de Livraison</u></label><br>
+      <input type="radio" name="typeLivraison" id="habituel" value="habituel" checked>
+      <label for="habituel">Habituel (15$)</label><br>
+      <input type="radio" name="typeLivraison" id="rapide" value="rapide">
+      <label for="rapide">Rapide : En 5 jours (40$)</label><br></br>
+    </div>
+    
+    <!--Boutons soumet donner qui fait des cacules et affiche le recu-->
+    <input type="button" id="btnSoumet" onclick="calculCoutTotal()"  value="Achêter">
+  </form>
+
+  <!-- Création d'une section pour l'affichage du réçu -->
+  <div id="divAfficheRecu">
+  </div>
+
+  <div class="bouton">
+    <!--Bouton qui descent a la caisse--> 
+    <p id="btnCaisse"><a href="#caisse">Passer a la caisse</a></p>
+    <!--Bouton retour index.html-->
+    <p id="retour"><a href="index.html">Retour à la page d'accueil</a></p>
+  </div>
+  
+  <!--La caisse en tableau permet entre de quantite de chaque billet-->
+  </div>
+    <h1><a id="caisse">Caisse</a></h1>
+    <p class="description">Pour payer insere la quantite pour chaque billet et clique le bouton payer.</p>
+    
+    <div id="divCaisse">
+    <table>
+      <thead>
+        <tr>
+          <th>Billets et pieces</th>
+          <th>Quantite</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>100$</td>
+          <td>
+            <label for='txtqteBillet100'></label>
+            <input type='text' id='txtqteBillet100'>
+          </td>
+        </tr>
+        <tr>
+          <td>50$</td>
+          <td>
+            <label for='txtqteBillet50'></label>
+            <input type='text' id='txtqteBillet50'>
+          </td>
+        </tr>
+        <tr>
+          <td>20$</td>
+          <td>
+            <label for='txtqteBillet20'></label>
+            <input type='text' id='txtqteBillet20'>
+          </td>
+        </tr>
+        <tr>
+          <td>10$</td>
+          <td>
+            <label for='txtqteBillet10'></label>
+            <input type='text' id='txtqteBillet10'>
+          </td>
+        </tr>
+        <tr>
+          <td>5$</td>
+          <td>
+            <label for='txtqteBillet5'></label>
+            <input type='text' id='txtqteBillet5'>
+          </td>
+        </tr>
+        <tr>
+          <td>2$</td>
+          <td>
+            <label for='txtqteBillet2'></label>
+            <input type='text' id='txtqteBillet2'>
+          </td>
+        </tr>
+        <tr>
+          <td>1$</td>
+          <td>
+            <label for='txtqteBillet1'></label>
+            <input type='text' id='txtqteBillet1'>
+          </td>
+        </tr>
+        <tr>
+          <td>0,25$</td>
+          <td>
+            <label for='txtqteBillet025'></label>
+            <input type='text' id='txtqteBillet025'>
+          </td>
+        </tr>
+        <tr>
+          <td>0,10$</td>
+          <td>
+            <label for='txtqteBillet010'></label>
+            <input type='text' id='txtqteBillet010'></td>
+        </tr>
+        <tr>
+          <td>0,05$</td>
+          <td>
+            <label for='txtqteBillet005'></label>
+            <input type='text' id='txtqteBillet005'>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  <!--Boutton pour remise de l'argent pour acheter-->
+  <input type="button" id="btnPayer" onclick="payer()" value="Payer">
+  </div>
+
+  <!--Div affiche montant retourne-->
+  <div id="divAfficheRetour">
+  </div>
+  
+  </div>
+  
+  <!--Div message merci pour la commande-->
+  <div id="divMessageMerci" class ="sectionSousTitre">
+  </div>
+    
+  <script src="scripts/magasin.js"></script>
+
+  <div class="bouton">
+    <!--Bouton qui monte au magasin--> 
+    <p id="btnMagasin"><a href="#magasin">Retour au magasin</a></p>
+    <!--Bouton retour index.html-->
+    <p id="retour"><a href="index.html">Retour à la page d'accueil</a></p>
+  </div>
+  </div>
+  
+</body>
+</html>
