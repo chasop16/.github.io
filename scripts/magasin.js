@@ -26,7 +26,8 @@ function calculCoutTotal() {
     tblCalculCout[i].splice(1, 1, 0);
     }
   }
- 
+ /*Source pour isNaN : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN*/
+  
   /*Definiton variable pour la province de residence qui determine les taxes*/
   var province = document.getElementById("selRegion").value;
   
